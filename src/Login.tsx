@@ -132,7 +132,7 @@ export default function Login(){
       <div className={`grid justify-center items-center bg-slate-100 h-full ${signIn ? "" : "py-10"}`}>  
         <div className={`bg-white grid place-items-center px-5 text-center sm:px-15 py-10 shadow-2xl/30 rounded-lg ${signIn ? "hidden" : "block"}`}>
           <div className="grid w-26 h-26 shadow-lg rounded-full bg-slate-100">
-            <img className="w-25 h-25 rounded-full place-self-center" src={Logo} alt="good image"/> 
+            <img className="w-25 h-25 rounded-full place-self-center" src={Logo} alt="good spot"/> 
           </div>
           <h1 className="text-3xl font-bold text-neutral-950 mt-8">Welcome to HealTogether</h1>
           <p className="font-semibold text-neutral-500 text-lg mt-5">Sign in to continue</p>
@@ -169,7 +169,7 @@ export default function Login(){
          </form>
          <div className="flex mt-3 w-full">
           <div className="font-semibold text-neutral-500 text-sm text-start grow-1">Forgot password?</div>
-          <div className="font-semibold text-neutral-400 text-sm cursor-pointer hover:text-neutral-500">Need an account? <a className="text-neutral-600" href="#" onClick={handleSignin}>Sign up</a></div>
+          <div className="font-semibold text-neutral-400 text-sm cursor-pointer hover:text-neutral-500">Need an account? <button className="text-neutral-600" onClick={handleSignin}>Sign up</button></div>
          </div>
         </div>
         {signIn &&
