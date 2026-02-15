@@ -132,7 +132,7 @@ export default function Login(){
       <div className={`grid justify-center items-center bg-slate-100 h-full ${signIn ? "" : "py-10"}`}>  
         <div className={`bg-white grid place-items-center px-5 text-center sm:px-15 py-10 shadow-2xl/30 rounded-lg ${signIn ? "hidden" : "block"}`}>
           <div className="grid w-26 h-26 shadow-lg rounded-full bg-slate-100">
-            <img className="w-25 h-25 rounded-full place-self-center" src={Logo}/> 
+            <img className="w-25 h-25 rounded-full place-self-center" src={Logo} alt="good image"/> 
           </div>
           <h1 className="text-3xl font-bold text-neutral-950 mt-8">Welcome to HealTogether</h1>
           <p className="font-semibold text-neutral-500 text-lg mt-5">Sign in to continue</p>
@@ -169,7 +169,7 @@ export default function Login(){
          </form>
          <div className="flex mt-3 w-full">
           <div className="font-semibold text-neutral-500 text-sm text-start grow-1">Forgot password?</div>
-          <div className="font-semibold text-neutral-400 text-sm cursor-pointer hover:text-neutral-500">Need an account? <a className="text-neutral-600" onClick={handleSignin}>Sign up</a></div>
+          <div className="font-semibold text-neutral-400 text-sm cursor-pointer hover:text-neutral-500">Need an account? <a className="text-neutral-600" href="#" onClick={handleSignin}>Sign up</a></div>
          </div>
         </div>
         {signIn &&
@@ -191,7 +191,7 @@ export default function Login(){
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" className="bi bi-envelope" viewBox="0 0 16 16">
            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
            </svg>
-            <input id="sign-email" name="sign-email" type="email" value={signData.email} className="focus:outline-none placeholder:text-md w-full placeholder:text-neutral-400" onChange={handleChangeSign} placeholder="you@example.co"/>
+            <input id="sign-email" name="email" type="email" value={signData.email} className="focus:outline-none placeholder:text-md w-full placeholder:text-neutral-400" onChange={handleChangeSign} placeholder="you@example.co"/>
           </div>
           {signError.email && (<p className="text-red-700 mb-2 text-sm text-start">{signError.email}</p>)}
           </div>
